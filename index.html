@@ -417,6 +417,50 @@
   .footer-info{grid-template-columns:1fr}
 }
 
+
+/* Mobile Hero Fix V25 - no cropped first section */
+.mobile-hero{display:none}
+@media(max-width:980px){
+  .hero{overflow:visible;background:#fff}
+  .hero .hero-pc,.hero>.hotspot{display:none!important}
+  .mobile-hero{display:block;padding:18px 20px 32px;background:linear-gradient(180deg,#fff 0%,#fbfaf8 100%)}
+  .mobile-hero-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:26px}
+  .mobile-logo{color:var(--navy);line-height:1}
+  .mobile-logo strong{display:block;font-size:24px;font-weight:1000;letter-spacing:-.06em}
+  .mobile-logo span{display:block;margin-top:6px;font-size:11px;font-weight:900;letter-spacing:.16em}
+  .mobile-top-call{font-size:14px;font-weight:950;color:var(--navy);padding:10px 12px;border:1px solid rgba(7,31,70,.10);border-radius:999px;background:#fff}
+  .mobile-hero-copy{padding-top:8px}
+  .mobile-area{margin:0 0 5px;font-size:15px;font-weight:900;color:var(--navy);letter-spacing:-.035em}
+  .mobile-emergency{margin:0 0 28px;font-size:16px;font-weight:950;color:var(--orange);letter-spacing:-.04em}
+  .mobile-hero h1{margin:0;color:var(--navy);font-size:clamp(48px,15vw,68px);line-height:.98;letter-spacing:-.085em;font-weight:1000}
+  .mobile-hero h1 em{font-style:normal;color:var(--orange)}
+  .mobile-sub{margin:18px 0 24px;color:#384152;font-size:15.5px;font-weight:700;letter-spacing:-.045em}
+  .mobile-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+  .mobile-actions a{height:56px;display:flex;align-items:center;justify-content:center;border-radius:16px;font-size:16px;font-weight:950;letter-spacing:-.04em}
+  .mobile-call{background:var(--navy);color:#fff;box-shadow:0 14px 32px rgba(7,31,70,.18)}
+  .mobile-talk{background:#fee500;color:#191919;border:1px solid rgba(7,31,70,.08)}
+  .mobile-hero-photo{margin:0;border-radius:26px;overflow:hidden;background:#eef2f6;box-shadow:0 18px 48px rgba(7,31,70,.08)}
+  .mobile-hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center center;transform:none!important}
+  .mobile-trust{display:grid;grid-template-columns:1fr;gap:8px;margin-top:14px}
+  .mobile-trust span{display:flex;align-items:center;justify-content:center;min-height:44px;border:1px solid rgba(7,31,70,.08);border-radius:14px;background:#fff;color:var(--navy);font-size:14px;font-weight:900;letter-spacing:-.04em}
+  .project{padding-top:76px}
+  .fixed-cta{bottom:calc(10px + env(safe-area-inset-bottom));padding:8px;border-radius:26px;width:calc(100% - 24px);gap:8px}
+  .fixed-cta a{min-height:50px;display:flex;align-items:center;justify-content:center;font-size:15px;padding:10px 8px}
+}
+@media(max-width:520px){
+  .mobile-hero{padding:16px 18px 30px}
+  .mobile-hero-top{margin-bottom:22px}
+  .mobile-logo strong{font-size:22px}
+  .mobile-top-call{font-size:13px;padding:9px 10px}
+  .mobile-hero h1{font-size:54px}
+  .mobile-actions a{height:54px;border-radius:15px}
+  .mobile-hero-photo{border-radius:22px}
+}
+@media(max-width:380px){
+  .mobile-hero h1{font-size:48px}
+  .mobile-actions{grid-template-columns:1fr}
+}
+
 </style>
 <style>
 
@@ -1648,11 +1692,48 @@ body{
 }
 </style>
 
+<style>
+
+/* Review Manual Slider V26 - no autoplay */
+.review-manual{position:relative;width:100%;}
+.review-marquee{overflow-x:auto!important;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.review-marquee::-webkit-scrollbar{display:none;}
+.review-track{animation:none!important;width:max-content;}
+.review-card{scroll-snap-align:center;}
+.review::before,.review::after{display:none!important;}
+.review-control{position:absolute;top:50%;z-index:5;transform:translateY(-50%);width:52px;height:52px;border-radius:999px;border:1px solid rgba(7,31,70,.10);background:rgba(255,255,255,.94);box-shadow:0 12px 34px rgba(15,23,42,.10);color:var(--navy);font-size:34px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;}
+.review-control:hover{transform:translateY(-50%) scale(1.04);border-color:rgba(255,122,0,.20);box-shadow:0 16px 42px rgba(15,23,42,.13);}
+.review-prev{left:34px;}.review-next{right:34px;}
+.review-hint{margin:24px auto 0;text-align:center;color:#8a94a3;font-size:14px;font-weight:650;letter-spacing:-.03em;}
+@media(max-width:980px){.review-track{gap:18px!important;padding:4px 22px 22px!important;}.review-card{scroll-snap-align:start;}.review-control{width:42px;height:42px;font-size:28px;top:auto;bottom:-36px;background:#fff;}.review-prev{left:calc(50% - 54px);}.review-next{right:calc(50% - 54px);}.review-hint{margin-top:52px;font-size:13px;}.review{padding-bottom:132px!important;}}
+</style>
 </head>
 <body>
 <main class="wrap">
 <section aria-label="싹뚫배관 첫 화면" class="hero">
-<img alt="싹뚫배관 Premium 2026 전주 완주 익산 배관 막힘 해결 첫 화면" src="assets/hero-option-a.png" fetchpriority="high" decoding="async"/>
+<img class="hero-pc" alt="싹뚫배관 Premium 2026 전주 완주 익산 배관 막힘 해결 첫 화면" src="assets/hero-option-a.png" fetchpriority="high" decoding="async"/>
+<div class="mobile-hero" aria-hidden="true">
+  <div class="mobile-hero-top">
+    <div class="mobile-logo"><strong>싹뚫배관</strong><span>PREMIUM 2026</span></div>
+    <a class="mobile-top-call" href="tel:01020622814">010-2062-2814</a>
+  </div>
+  <div class="mobile-hero-copy">
+    <p class="mobile-area">전주 · 완주 · 익산 전지역</p>
+    <p class="mobile-emergency">24시간 긴급 출동</p>
+    <h1>막힌 배관,<br/>확실하게<br/><em>해결합니다</em></h1>
+    <p class="mobile-sub">정확한 진단 · 완벽한 해결 · 깔끔한 마무리</p>
+    <div class="mobile-actions">
+      <a class="mobile-call" href="tel:01020622814">전화하기</a>
+      <a class="mobile-talk" href="http://pf.kakao.com/_xoRxmPX" target="_blank" rel="noopener">카카오톡 상담</a>
+    </div>
+  </div>
+  <figure class="mobile-hero-photo"><img src="assets/hero-mobile-photo.jpg" alt="싹뚫배관 장비 점검 현장"/></figure>
+  <div class="mobile-trust">
+    <span>전주·완주·익산</span>
+    <span>최신 장비 보유</span>
+    <span>고객 만족도 99%</span>
+  </div>
+</div>
 <a aria-label="전화하기 010-2062-2814" class="hotspot hs-phone-main" href="tel:01020622814"></a><a aria-label="카카오톡 상담" class="hotspot hs-kakao-main" href="http://pf.kakao.com/_xoRxmPX" rel="noopener" target="_blank"></a><a aria-label="블로그 보기" class="hotspot hs-blog-main" href="https://blog.naver.com/openpipe" rel="noopener" target="_blank"></a><a aria-label="서비스 안내로 이동" class="hotspot hs-nav-service" href="#service"></a><a aria-label="시공 사례로 이동" class="hotspot hs-nav-case" href="#project01"></a><a aria-label="브랜드 약속으로 이동" class="hotspot hs-nav-brand" href="#promise"></a><a aria-label="고객 후기로 이동" class="hotspot hs-nav-review" href="#review"></a><a aria-label="상담 문의로 이동" class="hotspot hs-nav-contact" href="#contact"></a><a aria-label="상단 전화하기" class="hotspot hs-phone-top" href="tel:01020622814"></a><a aria-label="상단 카카오톡 상담" class="hotspot hs-kakao-top" href="http://pf.kakao.com/_xoRxmPX" rel="noopener" target="_blank"></a><a aria-label="상단 블로그 보기" class="hotspot hs-blog-top" href="https://blog.naver.com/openpipe" rel="noopener" target="_blank"></a><a aria-label="시공 현장 보기" class="hotspot hs-next" href="#project01"></a>
 </section>
 
@@ -1737,67 +1818,43 @@ body{
     <p class="review-desc">현장에서 확인하고 해결한 경험을 고객의 말로 담백하게 남겼습니다.</p>
   </div>
 
-  <div class="review-marquee" aria-label="고객 후기 자동 슬라이드">
-    <div class="review-track">
-      <article class="review-card">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-01.jpg" alt="욕실 하수구 막힘 현장 작업 사진"><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">김*수</h3><p class="review-text">작업 전에 원인을 먼저 설명해 주셔서 안심하고 맡길 수 있었습니다.</p><span class="review-tag">욕실 배수구 막힘</span></div>
-      </article>
-      <article class="review-card">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-02.jpg" alt="배관 작업 현장 사진"><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">박*영</h3><p class="review-text">예상보다 빠르게 해결됐고 작업 후 정리도 깔끔했습니다.</p><span class="review-tag">싱크대 배수관 청소</span></div>
-      </article>
-      <article class="review-card">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-03.jpg" alt="배수관 막힘 현장 사진"><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">이*민</h3><p class="review-text">내시경으로 직접 보여주시며 설명해 주셔서 믿음이 갔습니다.</p><span class="review-tag">배관 내시경 점검</span></div>
-      </article>
-      <article class="review-card">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-04.jpg" alt="배관 내시경 검사 장비 화면 사진"><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">최*아</h3><p class="review-text">다른 업체에서 해결하지 못한 문제를 한 번에 해결해 주셨습니다.</p><span class="review-tag">배수관 막힘 해결</span></div>
-      </article>
-      <article class="review-card">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-05.jpg" alt="변기 막힘 석션 작업 사진"><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">정*호</h3><p class="review-text">작업 후 배수 상태까지 꼼꼼하게 확인해 주셔서 만족했습니다.</p><span class="review-tag">변기 막힘 해결</span></div>
-      </article>
-      <article class="review-card">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-06.jpg" alt="욕실 배관 막힘 현장 확인 사진"><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">한*지</h3><p class="review-text">급하게 연락드렸는데도 차분하게 설명하고 처리해 주셨습니다.</p><span class="review-tag">욕실 배관 점검</span></div>
-      </article>
-      <article class="review-card">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-07.jpg" alt="배관 장비를 사용한 현장 작업 사진"><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">오*현</h3><p class="review-text">필요한 작업만 진행해 주셔서 부담 없이 맡길 수 있었습니다.</p><span class="review-tag">머리카락 제거 작업</span></div>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-01.jpg" alt=""><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">김*수</h3><p class="review-text">작업 전에 원인을 먼저 설명해 주셔서 안심하고 맡길 수 있었습니다.</p><span class="review-tag">욕실 배수구 막힘</span></div>
-      </article>
-      <article class="review-card" aria-hidden="true">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-02.jpg" alt=""><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">박*영</h3><p class="review-text">예상보다 빠르게 해결됐고 작업 후 정리도 깔끔했습니다.</p><span class="review-tag">싱크대 배수관 청소</span></div>
-      </article>
-      <article class="review-card" aria-hidden="true">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-03.jpg" alt=""><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">이*민</h3><p class="review-text">내시경으로 직접 보여주시며 설명해 주셔서 믿음이 갔습니다.</p><span class="review-tag">배관 내시경 점검</span></div>
-      </article>
-      <article class="review-card" aria-hidden="true">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-04.jpg" alt=""><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">최*아</h3><p class="review-text">다른 업체에서 해결하지 못한 문제를 한 번에 해결해 주셨습니다.</p><span class="review-tag">배수관 막힘 해결</span></div>
-      </article>
-      <article class="review-card" aria-hidden="true">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-05.jpg" alt=""><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">정*호</h3><p class="review-text">작업 후 배수 상태까지 꼼꼼하게 확인해 주셔서 만족했습니다.</p><span class="review-tag">변기 막힘 해결</span></div>
-      </article>
-      <article class="review-card" aria-hidden="true">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-06.jpg" alt=""><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">한*지</h3><p class="review-text">급하게 연락드렸는데도 차분하게 설명하고 처리해 주셨습니다.</p><span class="review-tag">욕실 배관 점검</span></div>
-      </article>
-      <article class="review-card" aria-hidden="true">
-        <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-07.jpg" alt=""><span class="review-badge">실제 작업 후기</span></figure>
-        <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">오*현</h3><p class="review-text">필요한 작업만 진행해 주셔서 부담 없이 맡길 수 있었습니다.</p><span class="review-tag">머리카락 제거 작업</span></div>
-      </article>
+  <div class="review-manual" aria-label="고객 후기 수동 슬라이드">
+    <button class="review-control review-prev" type="button" aria-label="이전 후기 보기">‹</button>
+    <div class="review-marquee" tabindex="0" aria-label="고객 후기 목록">
+      <div class="review-track">
+        <article class="review-card">
+          <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-01.jpg" alt="욕실 하수구 막힘 현장 작업 사진"><span class="review-badge">실제 작업 후기</span></figure>
+          <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">김*수</h3><p class="review-text">작업 전에 원인을 먼저 설명해 주셔서 안심하고 맡길 수 있었습니다.</p><span class="review-tag">욕실 배수구 막힘</span></div>
+        </article>
+        <article class="review-card">
+          <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-02.jpg" alt="배관 작업 현장 사진"><span class="review-badge">실제 작업 후기</span></figure>
+          <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">박*영</h3><p class="review-text">예상보다 빠르게 해결됐고 작업 후 정리도 깔끔했습니다.</p><span class="review-tag">싱크대 배수관 청소</span></div>
+        </article>
+        <article class="review-card">
+          <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-03.jpg" alt="배수관 막힘 현장 사진"><span class="review-badge">실제 작업 후기</span></figure>
+          <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">이*민</h3><p class="review-text">내시경으로 직접 보여주시며 설명해 주셔서 믿음이 갔습니다.</p><span class="review-tag">배관 내시경 점검</span></div>
+        </article>
+        <article class="review-card">
+          <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-04.jpg" alt="배관 내시경 검사 장비 화면 사진"><span class="review-badge">실제 작업 후기</span></figure>
+          <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">최*아</h3><p class="review-text">다른 업체에서 해결하지 못한 문제를 한 번에 해결해 주셨습니다.</p><span class="review-tag">배수관 막힘 해결</span></div>
+        </article>
+        <article class="review-card">
+          <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-05.jpg" alt="변기 막힘 석션 작업 사진"><span class="review-badge">실제 작업 후기</span></figure>
+          <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">정*호</h3><p class="review-text">작업 후 배수 상태까지 꼼꼼하게 확인해 주셔서 만족했습니다.</p><span class="review-tag">변기 막힘 해결</span></div>
+        </article>
+        <article class="review-card">
+          <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-06.jpg" alt="욕실 배관 막힘 현장 확인 사진"><span class="review-badge">실제 작업 후기</span></figure>
+          <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">한*지</h3><p class="review-text">급하게 연락드렸는데도 차분하게 설명하고 처리해 주셨습니다.</p><span class="review-tag">욕실 배관 점검</span></div>
+        </article>
+        <article class="review-card">
+          <figure class="review-photo"><img loading="lazy" decoding="async" src="assets/review-07.jpg" alt="배관 장비를 사용한 현장 작업 사진"><span class="review-badge">실제 작업 후기</span></figure>
+          <div class="review-body"><div class="review-stars">★★★★★</div><h3 class="review-name">오*현</h3><p class="review-text">필요한 작업만 진행해 주셔서 부담 없이 맡길 수 있었습니다.</p><span class="review-tag">머리카락 제거 작업</span></div>
+        </article>
+      </div>
     </div>
+    <button class="review-control review-next" type="button" aria-label="다음 후기 보기">›</button>
   </div>
+  <div class="review-hint" aria-hidden="true">좌우로 넘겨 실제 후기를 확인해보세요</div>
 </section>
 
 
@@ -1854,6 +1911,24 @@ body{
   "url":"https://example.com",
   "description":"전주·완주·익산 배관 막힘, 하수구 막힘, 배수관 막힘 상담 및 시공 전문 업체"
 }
+</script>
+
+<script>
+(function(){
+  const wrap=document.querySelector('#review .review-marquee');
+  const track=document.querySelector('#review .review-track');
+  const prev=document.querySelector('#review .review-prev');
+  const next=document.querySelector('#review .review-next');
+  if(!wrap||!track||!prev||!next) return;
+  const getStep=()=>{
+    const card=track.querySelector('.review-card');
+    if(!card) return Math.max(260, Math.round(wrap.clientWidth*.82));
+    const gap=parseFloat(getComputedStyle(track).gap)||24;
+    return Math.round(card.getBoundingClientRect().width+gap);
+  };
+  prev.addEventListener('click',()=>wrap.scrollBy({left:-getStep(),behavior:'smooth'}));
+  next.addEventListener('click',()=>wrap.scrollBy({left:getStep(),behavior:'smooth'}));
+})();
 </script>
 </body>
 </html>
