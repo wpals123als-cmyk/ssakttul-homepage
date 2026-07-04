@@ -1,0 +1,6 @@
+Brand Polish V24
+- 전체 여백/타이포그래피 미세 조정
+- 버튼/호버/애니메이션 속도 통일
+- 이미지 radius/비율/그림자 정리
+- 모바일 여백/글자 크기 보정
+- 기본 SEO 메타, OG, LocalBusiness JSON-LD, lazy loading 추가
