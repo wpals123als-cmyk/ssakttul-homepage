@@ -1853,7 +1853,8 @@ body{
 .hero-pc-brand-mask { position:absolute; top:7.55%; left:6.15%; width:8.6%; height:1.7%; background:#fcfcfc; display:flex; align-items:center; justify-content:flex-end; color:#a43d00; font-size:.91cqw; font-weight:850; line-height:1; white-space:nowrap; }
 .pc-banner-copy,.pc-banner-trust { position:absolute; z-index:1; color:#0b2a57; box-sizing:border-box; }
 .pc-banner-copy { left:4.9%; top:15.5%; width:33.65%; height:62%; padding:1.15cqw .6cqw .35cqw .2cqw; background:linear-gradient(140deg,#fdfdfd 42%,#f8f8f8); }
-.pc-banner-area { display:block; margin:0 0 1.35cqw; padding-bottom:.35cqw; color:#0b2a57; font-size:1.53cqw; font-weight:850; line-height:2.376cqw; border-bottom:.23cqw solid transparent; letter-spacing:-.035em; white-space:nowrap; }
+.pc-banner-area { display:flex; align-items:center; gap:.42em; margin:0 0 1.22cqw; padding-bottom:.35cqw; color:#0b2a57; font-size:1.7cqw; font-weight:850; line-height:2.376cqw; border-bottom:.23cqw solid transparent; letter-spacing:-.035em; white-space:nowrap; }
+.pc-banner-pin { width:1em; height:1em; flex:none; fill:none; color:#c45500; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
 .pc-banner-copy h1 { margin:0; color:#071936; font-size:5.2cqw; line-height:1.12; letter-spacing:-.08em; word-break:keep-all; }
 .pc-banner-copy h1 span { display:inline-block; font-size:2.82cqw; letter-spacing:-.065em; }
 .pc-banner-copy h1 em { color:#e96c00; font-style:normal; }
@@ -1884,7 +1885,7 @@ body{
 .mobile-hero .pc-banner-trust { display:none; }
 @media(max-width:980px) {
  .mobile-logo small { display:block; text-align:right; color:#a43d00; font-size:12px; font-weight:800; margin-top:3px; }
- .mobile-hero .pc-banner-area { font-size:clamp(16px,4vw,21px); }
+ .mobile-hero .pc-banner-area { font-size:clamp(17px,4.15vw,22px); }
  .mobile-hero .hero-area-note,.mobile-hero .pc-banner-description { font-size:15px; color:#465367; line-height:1.5; word-break:keep-all; }
  .mobile-hero .hero-area-note { margin:0 0 19px; }
  .mobile-hero .hero-headline { color:#0b2a57; font-weight:900; line-height:1.14; letter-spacing:-.07em; word-break:keep-all; }
@@ -1910,7 +1911,7 @@ body{
 <img class="hero-pc" alt="싹뚫배관 작업자가 배관 내시경으로 점검하는 모습" src="hero-pc-restored.webp" fetchpriority="high" decoding="async"/>
 <span class="hero-pc-brand-mask">24시 긴급 출동</span>
 <div class="pc-banner-copy">
-  <p class="pc-banner-area">전국 출장 상담 · 방문 일정 안내</p>
+  <p class="pc-banner-area"><svg class="pc-banner-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>전국 어디서나, 배관 문제 상담</p>
   <h1><span>하수구·변기·싱크대 막힘</span><br>원인부터 찾아<br><em>해결합니다</em></h1>
   <p class="pc-banner-description">지역과 증상을 알려주시면<br>출장 가능 여부와 방문 일정을 안내해 드립니다.</p>
   <div class="pc-banner-actions">
@@ -1927,7 +1928,7 @@ body{
     <a class="mobile-top-call" href="tel:01020622814">010-2062-2814</a>
   </div>
   <div class="mobile-hero-copy">
-    <p class="pc-banner-area">전국 출장 상담 · 방문 일정 안내</p>
+    <p class="pc-banner-area"><svg class="pc-banner-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>전국 어디서나, 배관 문제 상담</p>
     <h1 class="hero-headline"><span>하수구·변기·싱크대 막힘</span><span>원인부터 찾아</span><em>해결합니다</em></h1>
     <p class="pc-banner-description">지역과 증상을 알려주시면<br>출장 가능 여부와 방문 일정을 안내해 드립니다.</p>
     <div class="pc-banner-actions">
