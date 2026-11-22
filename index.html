@@ -1995,7 +1995,15 @@ body{
 <style>
 #nationwide-consult{padding:70px 18px;background:#f2f6fc;color:#102b52;font-family:inherit}#nationwide-consult .consult-inner{max-width:920px;margin:auto}#nationwide-consult h2{font-size:clamp(27px,4vw,42px);text-align:center;margin:0 0 12px}#nationwide-consult .consult-lead{text-align:center;line-height:1.8;margin:0 0 28px}#nationwide-consult form{background:white;border-radius:20px;padding:clamp(20px,4vw,40px);box-shadow:0 12px 36px #0b2a5714}#nationwide-consult .fields{display:grid;grid-template-columns:1fr 1fr;gap:17px}#nationwide-consult label{display:block;font-size:14px;font-weight:700;margin-bottom:7px}#nationwide-consult input,#nationwide-consult select,#nationwide-consult textarea{box-sizing:border-box;width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:13px;font:inherit;background:#fff;color:#182e48}#nationwide-consult .wide{grid-column:1/-1}#nationwide-consult .privacy{display:flex;gap:10px;align-items:flex-start;font-size:13px;margin:22px 0;line-height:1.7}#nationwide-consult .privacy input{width:auto;margin-top:4px}#nationwide-consult button{width:100%;border:0;border-radius:12px;padding:17px;background:#f07821;color:white;font-size:18px;font-weight:800;cursor:pointer}#nationwide-consult button:disabled{opacity:.55;cursor:wait}#consult-status{margin-top:14px;font-weight:700;line-height:1.6}#nationwide-consult .consult-call{text-align:center;margin-top:17px}#nationwide-consult .consult-call a{color:#0b2a57;font-weight:800}@media(max-width:620px){#nationwide-consult .fields{grid-template-columns:1fr}}
 </style>
-<section id="nationwide-consult" aria-labelledby="consult-title"><div class="consult-inner"><h2 id="consult-title">전국 출장 상담 신청</h2><p class="consult-lead">하수구 · 변기 · 싱크대 막힘부터 고압세척까지<br>접수 내용을 확인한 후 방문 가능 일정과 비용을 안내드립니다.</p><form id="consult-form"><p class="consult-required">별표(*)가 붙은 항목은 필수입니다.</p><div class="fields">
+<section id="nationwide-consult" aria-labelledby="consult-title"><div class="consult-inner"><header class="consult-intro">
+<h2 id="consult-title">막힌 배관, <span>어디가 문제일까요?</span></h2>
+<p class="consult-lead"><span>하수구·변기·싱크대 막힘부터 수전 교체까지</span> <span>지역과 증상만 남겨주세요. 방문 가능 여부와 일정을 안내해 드립니다.</span></p>
+<ul class="consult-highlights" role="list">
+<li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2 M8 3h8v4H8z M8 12h8 M8 16h6"/></svg><span>간편 상담</span></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11s-8-6-8-11a8 8 0 1 1 16 0Z M15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg><span>전국 문의</span></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v15H4z M4 10h16 M8 3v5 M16 3v5 M8 15l2 2 5-5"/></svg><span>일정 안내</span></li>
+</ul>
+</header><form id="consult-form"><h3 class="consult-form-title">상담 신청 정보</h3><p class="consult-required">별표(*)가 붙은 항목은 필수입니다.</p><div class="fields">
 <div><label for="c-name">성함 *</label><input id="c-name" name="name" maxlength="40" required autocomplete="name"></div>
 <div><label for="c-phone">연락처 *</label><input id="c-phone" name="phone" type="tel" inputmode="numeric" maxlength="20" placeholder="010-0000-0000" required autocomplete="tel"></div>
 <div><label for="c-region">시·도 *</label><select id="c-region" name="region" required><option value="">지역 선택</option><option>서울특별시</option><option>부산광역시</option><option>대구광역시</option><option>인천광역시</option><option>광주광역시</option><option>대전광역시</option><option>울산광역시</option><option>세종특별자치시</option><option>경기도</option><option>강원특별자치도</option><option>충청북도</option><option>충청남도</option><option>전북특별자치도</option><option>전라남도</option><option>경상북도</option><option>경상남도</option><option>제주특별자치도</option></select></div>
@@ -2399,6 +2407,44 @@ body{
 #consult-form .consult-field-error { color:#b42318; font-size:13px; line-height:1.4; margin-top:5px; }
 #consult-form #c-date { cursor:pointer; }
 #consult-form #c-date-hint { display:block; margin-top:5px; color:#465367; line-height:1.4; }
+</style>
+<style>
+#nationwide-consult { background:#fff; }
+#nationwide-consult .consult-intro { margin:0 auto 24px; text-align:center; }
+#nationwide-consult .consult-intro h2 {
+  color:#0b2a57; font-size:36px; font-weight:800;
+  line-height:1.22; letter-spacing:-.04em; margin:0 0 12px;
+}
+#nationwide-consult .consult-intro h2 span { color:#b94f00; }
+#nationwide-consult .consult-intro .consult-lead {
+  margin:0 auto 16px; color:#364861; font-size:16px; line-height:1.55;
+  word-break:keep-all;
+}
+#nationwide-consult .consult-lead span { display:block; }
+#nationwide-consult .consult-highlights {
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  width:100%; max-width:330px; margin:0 auto; padding:0; list-style:none;
+  color:#0b2a57;
+}
+#nationwide-consult .consult-highlights li {
+  display:grid; justify-items:center; gap:5px; font-size:14px; font-weight:700;
+}
+#nationwide-consult .consult-highlights svg { width:24px; height:24px; }
+#nationwide-consult .consult-form-title {
+  margin:0 0 7px; color:#0b2a57; font-size:17px; font-weight:800; line-height:1.4;
+}
+@media (max-width:520px) {
+  #nationwide-consult { padding-inline:12px; padding-block-start:26px; }
+  #nationwide-consult .consult-intro { margin-bottom:5px; }
+  #nationwide-consult .consult-intro h2 { font-size:clamp(25px,7vw,28px); margin-bottom:9px; }
+  #nationwide-consult .consult-intro h2 span { display:block; }
+  #nationwide-consult .consult-intro .consult-lead { font-size:14px; margin-bottom:13px; }
+  #nationwide-consult .consult-highlights { max-width:270px; }
+  #nationwide-consult .consult-highlights li { font-size:13px; gap:4px; }
+  #nationwide-consult .consult-highlights svg { width:22px; height:22px; }
+  #nationwide-consult #consult-form { padding-inline:16px; }
+  #nationwide-consult .consult-form-title { font-size:16px; }
+}
 </style>
 </body>
 </html>
