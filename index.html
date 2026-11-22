@@ -1853,19 +1853,21 @@ body{
 .hero-pc-brand-mask { position:absolute; top:7.55%; left:6.15%; width:8.8%; height:1.7%; background:#fcfcfc; }
 .pc-banner-copy,.pc-banner-trust { position:absolute; z-index:1; color:#0b2a57; box-sizing:border-box; }
 .pc-banner-copy { left:4.9%; top:15.5%; width:33.65%; height:62%; padding:1.15cqw .6cqw .35cqw .2cqw; background:linear-gradient(140deg,#fdfdfd 42%,#f8f8f8); }
-.pc-banner-area { margin:0 0 2.1cqw; color:#aa4300; font-size:1.45cqw; font-weight:850; }
+.pc-banner-area { display:flex; align-items:center; gap:.85cqw; margin:0 0 2.1cqw; font-weight:850; font-size:1.22cqw; white-space:nowrap; }
+.pc-banner-emergency { display:inline-flex; align-items:center; gap:.45cqw; padding:.46cqw .72cqw; border-radius:.44cqw; background:#fff0de; color:#a43d00; }
+.pc-banner-emergency::before { content:""; width:.48cqw; height:.48cqw; background:#e56e17; border-radius:50%; }
+.pc-banner-nationwide { color:#0b2a57; }
 .pc-banner-copy h1 { margin:0; color:#071936; font-size:5.2cqw; line-height:1.12; letter-spacing:-.08em; word-break:keep-all; }
 .pc-banner-copy h1 span { display:inline-block; font-size:2.82cqw; letter-spacing:-.065em; }
 .pc-banner-copy h1 em { color:#e96c00; font-style:normal; }
 .pc-banner-description { margin:1.8cqw 0; color:#374151; font-size:1.33cqw; line-height:1.48; word-break:keep-all; }
-.pc-banner-actions { display:grid; grid-template-columns:1.14fr 1fr 1fr; gap:.55cqw; }
-.pc-banner-actions a { display:flex; flex-direction:column; justify-content:center; gap:.25cqw; min-height:4.4cqw; padding:.62cqw .65cqw; background:#fff; border:1px solid #d9dee6; border-radius:.75cqw; color:#081936; font-size:1.07cqw; line-height:1.3; text-decoration:none; white-space:nowrap; transition:box-shadow .2s, border-color .2s; }
+.pc-banner-actions { display:grid; grid-template-columns:1.3fr .9fr 1.11fr; gap:.55cqw; }
+.pc-banner-actions a { display:flex; align-items:center; justify-content:center; gap:.38cqw; min-height:4.4cqw; padding:.55cqw .38cqw; background:#fff; border:1px solid #d9dee6; border-radius:.85cqw; color:#081936; font-size:1.08cqw; font-weight:850; line-height:1.25; text-decoration:none; white-space:nowrap; transition:box-shadow .2s, border-color .2s; }
 .pc-banner-actions a:hover { border-color:#0b2a57; box-shadow:0 .25cqw .6cqw #07193620; }
 .pc-banner-actions a:focus-visible { outline:2px solid #e96c00; outline-offset:2px; }
-.pc-banner-actions strong { font-weight:850; }
-.pc-banner-actions small { color:#465367; font-size:.86cqw; }
-.pc-banner-actions a:first-child small { color:#dce7fa; }
 .pc-banner-actions a:first-child { background:#071936; color:#fff; border-color:#071936; }
+.pc-banner-actions a:last-child { background:#fee500; color:#211d15; border-color:#f1d800; }
+.pc-banner-actions svg { width:1.2cqw; height:1.2cqw; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
 .pc-banner-case { display:inline-block; margin-top:1.2cqw; color:#0b2a57; font-size:1.17cqw; font-weight:700; text-underline-offset:.28cqw; }
 .pc-banner-trust { left:4.98%; top:79.7%; width:48.3%; height:11.05%; display:grid; grid-template-columns:repeat(3,1fr); align-items:center; margin:0; padding:1.25cqw .85cqw; background:transparent; border:0; border-radius:1.2cqw; }
 .pc-banner-trust div { margin-left:4.2cqw; padding:.3cqw .1cqw; background:#fcfcfc; min-height:3.75cqw; }
@@ -1881,13 +1883,16 @@ body{
 <img class="hero-pc" alt="싹뚫배관 작업자가 배관 내시경으로 점검하는 모습" src="hero-pc-restored.webp" fetchpriority="high" decoding="async"/>
 <span class="hero-pc-brand-mask" aria-hidden="true"></span>
 <div class="pc-banner-copy">
-  <p class="pc-banner-area">전국 출장 상담</p>
+  <div class="pc-banner-area">
+    <span class="pc-banner-emergency">24시 긴급 출동</span>
+    <span class="pc-banner-nationwide">전국 출장 상담</span>
+  </div>
   <h1><span>하수구·변기·싱크대 막힘</span><br>원인부터 찾아<br><em>해결합니다</em></h1>
   <p class="pc-banner-description">지역과 증상을 알려주시면<br>출장 가능 여부와 방문 일정을 안내해 드립니다.</p>
   <div class="pc-banner-actions">
-    <a href="#nationwide-consult"><strong>온라인 상담 신청</strong><small>지역·증상 남기기</small></a>
-    <a href="tel:01020622814"><strong>전화 상담</strong><small>010-2062-2814</small></a>
-    <a href="https://pf.kakao.com/_xoRxmPX" rel="noopener" target="_blank"><strong>카카오톡 상담</strong><small>사진 보내 문의</small></a>
+    <a href="#nationwide-consult"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H5V3h2zm7 0v5h5M8 12h8m-8 4h6"/></svg>온라인 상담 신청</a>
+    <a href="tel:01020622814"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3 4 5c-1 7 8 16 15 15l2-3-5-3-2 2c-2-1-5-4-6-6l2-2-3-5z"/></svg>전화 상담</a>
+    <a href="https://pf.kakao.com/_xoRxmPX" rel="noopener" target="_blank"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 11c0 4-4 7-9 7h-2l-5 3 1-4c-2-1-3-3-3-6 0-4 4-7 9-7s9 3 9 7z"/></svg>카카오톡 상담</a>
   </div>
   <a class="pc-banner-case" href="#project01">실제 시공 사례 보기 →</a>
 </div>
